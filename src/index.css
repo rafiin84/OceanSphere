@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+    --primary: 201 96% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 48%;
+    --accent: 172 76% 37%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 18% 91%;
+    --input: 214 18% 91%;
+    --ring: 201 96% 32%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 96%;
+    --card: 215 28% 11%;
+    --card-foreground: 210 20% 96%;
+    --popover: 215 28% 11%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 201 96% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 80%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 172 76% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 201 96% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply bg-white rounded-2xl border border-border/60 p-5 shadow-card hover:shadow-card-hover transition-all duration-200;
+  }
+
+  .page-header {
+    @apply flex items-center justify-between mb-6;
+  }
+
+  .page-title {
+    @apply text-2xl font-semibold text-foreground tracking-tight;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-4;
+  }
+
+  .badge-status-green {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-status-amber {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .badge-status-red {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200;
+  }
+
+  .badge-status-blue {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-ocean-50 text-ocean-700 border border-ocean-200;
+  }
+
+  .badge-status-gray {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-50 text-gray-600 border border-gray-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-ocean-700 text-white rounded-xl text-sm font-medium hover:bg-ocean-800 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-white text-foreground rounded-xl text-sm font-medium border border-border hover:bg-secondary transition-colors;
+  }
+
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table thead tr {
+    @apply border-b border-border bg-secondary/50;
+  }
+
+  .data-table thead th {
+    @apply text-left py-3 px-4 text-xs font-semibold text-muted-foreground uppercase tracking-wider;
+  }
+
+  .data-table tbody tr {
+    @apply border-b border-border/50 hover:bg-secondary/30 transition-colors cursor-pointer;
+  }
+
+  .data-table tbody td {
+    @apply py-3 px-4 text-sm;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150;
+  }
+
+  .sidebar-item-active {
+    @apply bg-ocean-700 text-white shadow-sm;
+  }
+
+  .sidebar-item-inactive {
+    @apply text-navy-400 hover:text-white hover:bg-white/10;
+  }
+
+  .metric-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-secondary rounded-lg text-sm font-medium;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl shadow-panel;
+  }
+
+  .skeleton {
+    @apply bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 bg-[length:200%_100%] animate-shimmer rounded-lg;
+  }
+
+  .progress-bar {
+    @apply h-1.5 rounded-full bg-secondary overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.3);
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Animated gradient background for ocean map placeholder */
+.ocean-map-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(3, 105, 161, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(13, 148, 136, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(7, 89, 133, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #0c4a6e 0%, #075985 30%, #0369a1 60%, #0d9488 100%);
+}
+
+/* Vessel pulse animation */
+@keyframes vessel-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.vessel-dot {
+  animation: vessel-pulse 2s ease-in-out infinite;
+}
