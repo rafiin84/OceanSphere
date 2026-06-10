@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2027"/>
+      <stop offset="50%" stop-color="#203a43"/>
+      <stop offset="100%" stop-color="#2c5364"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a4a"/>
+      <stop offset="100%" stop-color="#0a1e2a"/>
+    </linearGradient>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Twilight sky -->
+  <rect width="800" height="400" fill="url(#sky)"/>
+
+  <!-- Lighthouse in background (right) -->
+  <rect x="720" y="120" width="14" height="90" fill="#4b5563" opacity="0.5"/>
+  <polygon points="713,120 734,120 727,108 720,108" fill="#6b7280" opacity="0.5"/>
+  <circle cx="727" cy="113" r="5" fill="#fbbf24" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Distant port/harbor lights -->
+  <circle cx="680" cy="210" r="2" fill="#fbbf24" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="695" cy="208" r="1.5" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="710" cy="212" r="2" fill="#fbbf24" opacity="0.5"/>
+
+  <!-- Stars -->
+  <circle cx="100" cy="40" r="1" fill="white" opacity="0.7"/>
+  <circle cx="200" cy="25" r="1.2" fill="white" opacity="0.6"/>
+  <circle cx="310" cy="55" r="0.9" fill="white" opacity="0.8"/>
+  <circle cx="430" cy="30" r="1" fill="white" opacity="0.65"/>
+  <circle cx="520" cy="48" r="1.1" fill="white" opacity="0.7"/>
+
+  <!-- Ocean -->
+  <rect x="0" y="218" width="800" height="182" fill="url(#sea)"/>
+
+  <!-- Reflection/lights on water -->
+  <ellipse cx="727" cy="238" rx="12" ry="25" fill="#fbbf24" opacity="0.08"/>
+
+  <!-- Waves -->
+  <path d="M 0 228 Q 55 224 110 228 Q 165 232 220 228 Q 275 224 330 228 Q 385 232 440 228 Q 495 224 550 228 Q 605 232 660 228 Q 715 224 800 228" fill="none" stroke="#2c5364" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 0 244 Q 70 240 140 244 Q 210 248 280 244 Q 350 240 420 244 Q 490 248 560 244 Q 630 240 700 244 Q 760 248 800 244" fill="none" stroke="#203a43" stroke-width="1" opacity="0.4"/>
+
+  <!-- Wake -->
+  <path d="M 80 262 Q 200 256 310 252 Q 380 250 420 248" fill="none" stroke="#4a9bae" stroke-width="2" opacity="0.2"/>
+
+  <!-- === GENERAL CARGO WITH CRANES === -->
+  <!-- Hull -->
+  <path d="M 65 250 L 730 250 L 752 264 L 738 283 L 55 283 L 40 268 Z" fill="url(#hull)" filter="url(#shadow)"/>
+
+  <!-- Waterline red -->
+  <rect x="63" y="246" width="667" height="7" fill="#b91c1c" rx="1"/>
+  <rect x="63" y="253" width="667" height="3" fill="#991b1b"/>
+
+  <!-- Main deck -->
+  <rect x="67" y="215" width="663" height="38" fill="#374151" rx="1"/>
+  <rect x="67" y="215" width="663" height="4" fill="#6b7280" opacity="0.5"/>
+
+  <!-- Forward hatch -->
+  <rect x="85" y="220" width="100" height="26" rx="2" fill="#1f2937" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="135" y1="220" x2="135" y2="246" stroke="#4b5563" stroke-width="0.8"/>
+
+  <!-- Mid hatches -->
+  <rect x="250" y="220" width="95" height="26" rx="2" fill="#1f2937" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="420" y="220" width="95" height="26" rx="2" fill="#1f2937" stroke="#4b5563" stroke-width="1.5"/>
+
+  <!-- CRANES (general cargo characteristic) -->
+  <!-- Crane 1 -->
+  <line x1="195" y1="248" x2="195" y2="175" stroke="#9ca3af" stroke-width="4"/>
+  <line x1="195" y1="185" x2="235" y2="165" stroke="#9ca3af" stroke-width="3"/>
+  <line x1="195" y1="185" x2="160" y2="165" stroke="#6b7280" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Crane hook cable -->
+  <line x1="225" y1="168" x2="225" y2="215" stroke="#6b7280" stroke-width="1.5" opacity="0.7"/>
+  <rect x="220" y="210" width="10" height="6" rx="1" fill="#6b7280"/>
+  <!-- Crane base -->
+  <rect x="188" y="240" width="14" height="10" rx="1" fill="#4b5563"/>
+
+  <!-- Crane 2 -->
+  <line x1="375" y1="248" x2="375" y2="172" stroke="#9ca3af" stroke-width="4"/>
+  <line x1="375" y1="182" x2="415" y2="162" stroke="#9ca3af" stroke-width="3"/>
+  <line x1="375" y1="182" x2="338" y2="162" stroke="#6b7280" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Cable -->
+  <line x1="405" y1="166" x2="405" y2="215" stroke="#6b7280" stroke-width="1.5" opacity="0.7"/>
+  <rect x="400" y="210" width="10" height="6" rx="1" fill="#6b7280"/>
+  <!-- Base -->
+  <rect x="368" y="240" width="14" height="10" rx="1" fill="#4b5563"/>
+
+  <!-- Superstructure (aft) -->
+  <rect x="600" y="178" width="100" height="40" rx="3" fill="#374151"/>
+  <rect x="600" y="178" width="100" height="5" fill="#4b5563"/>
+
+  <!-- Bridge deck -->
+  <rect x="608" y="157" width="84" height="25" rx="2" fill="#1f2937"/>
+
+  <!-- Bridge windows -->
+  <rect x="616" y="163" width="11" height="8" rx="1.5" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="0.5"/>
+  <rect x="633" y="163" width="11" height="8" rx="1.5" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="0.5"/>
+  <rect x="650" y="163" width="11" height="8" rx="1.5" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="0.5"/>
+  <rect x="667" y="163" width="11" height="8" rx="1.5" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="0.5"/>
+  <rect x="684" y="163" width="8" height="8" rx="1.5" fill="#0ea5e9" opacity="0.6" stroke="#38bdf8" stroke-width="0.5"/>
+
+  <!-- Funnel -->
+  <rect x="637" y="120" width="26" height="42" rx="3" fill="#4b5563"/>
+  <rect x="637" y="120" width="26" height="9" rx="2" fill="#6b7280"/>
+  <!-- Black top -->
+  <rect x="637" y="120" width="26" height="5" rx="2" fill="#111827"/>
+  <!-- Smoke -->
+  <ellipse cx="650" cy="113" rx="8" ry="5" fill="#6b7280" opacity="0.55"/>
+  <ellipse cx="654" cy="100" rx="11" ry="7" fill="#9ca3af" opacity="0.4"/>
+
+  <!-- Forward mast -->
+  <line x1="130" y1="215" x2="130" y2="165" stroke="#4b5563" stroke-width="2.5"/>
+  <line x1="117" y1="180" x2="143" y2="180" stroke="#4b5563" stroke-width="1.5"/>
+  <!-- Nav light -->
+  <circle cx="130" cy="165" r="2.5" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Port light -->
+  <circle cx="65" cy="252" r="3" fill="#ef4444" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Label -->
+  <text x="300" y="276" text-anchor="middle" font-family="monospace" font-size="9" fill="#9ca3af" opacity="0.6">GENERAL CARGO</text>
+</svg>

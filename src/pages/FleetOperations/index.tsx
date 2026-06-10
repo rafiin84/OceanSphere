@@ -26,16 +26,17 @@ function VesselCard({ vessel, onClick }: { vessel: Vessel; onClick: () => void }
       className="bg-white rounded-2xl border border-border/60 shadow-card hover:shadow-card-hover overflow-hidden cursor-pointer group transition-all duration-200"
     >
       {/* Vessel Image */}
-      <div className="relative h-36 bg-gradient-to-br from-ocean-800 to-teal-800 overflow-hidden">
+      <div className="relative h-40 overflow-hidden bg-[#0c3a5e]">
         <img
           src={vessel.image}
           alt={vessel.name}
-          className="w-full h-full object-cover opacity-70 group-hover:opacity-80 transition-opacity group-hover:scale-105 duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        {/* Subtle bottom gradient for badge legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
           <VesselStatusBadge status={vessel.status} />
-          <div className="bg-white/15 backdrop-blur rounded-lg px-2 py-1 text-white text-xs font-medium border border-white/20">
+          <div className="bg-black/40 backdrop-blur-sm rounded-lg px-2 py-1 text-white text-xs font-medium border border-white/20">
             {getVesselTypeLabel(vessel.type)}
           </div>
         </div>
@@ -90,8 +91,8 @@ function VesselDetail({ vessel, onBack }: { vessel: Vessel; onBack: () => void }
       </button>
 
       {/* Hero */}
-      <div className="relative h-52 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-ocean-800 to-navy-900">
-        <img src={vessel.image} alt={vessel.name} className="w-full h-full object-cover opacity-50" />
+      <div className="relative h-52 rounded-2xl overflow-hidden mb-6 bg-[#0c3a5e]">
+        <img src={vessel.image} alt={vessel.name} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
           <div>
