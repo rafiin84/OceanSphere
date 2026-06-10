@@ -14,7 +14,7 @@ export const vessels: Vessel[] = [
     buildYear: 2019, classification: 'DNV GL', owner: 'Nordic Shipping AS', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 94, fuelEfficiency: 88, lastPort: 'Singapore',
     nextPort: 'Rotterdam', voyageId: 'V2026-0142', crewOnboard: 24, crewCapacity: 26,
-    image: 'https://images.unsplash.com/photo-1539601238269-8a50e08da0b7?w=800&q=80',
+    image: 'https://images.pexels.com/photos/29673823/pexels-photo-29673823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v002', name: 'MT Pacific Endeavour', imoNumber: '8765432', mmsiNumber: '345789012',
@@ -24,7 +24,7 @@ export const vessels: Vessel[] = [
     buildYear: 2017, classification: 'Lloyd\'s Register', owner: 'Pacific Holdings Ltd', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 78, fuelEfficiency: 82, lastPort: 'Rotterdam',
     nextPort: 'Antwerp', voyageId: 'V2026-0141', crewOnboard: 28, crewCapacity: 30,
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
+    image: 'https://images.pexels.com/photos/35569686/pexels-photo-35569686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v003', name: 'MV Atlantic Bridge', imoNumber: '7654321', mmsiNumber: '456890123',
@@ -34,7 +34,7 @@ export const vessels: Vessel[] = [
     buildYear: 2021, classification: 'Bureau Veritas', owner: 'Atlantic Lines', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 97, fuelEfficiency: 93, lastPort: 'Shanghai',
     nextPort: 'Los Angeles', voyageId: 'V2026-0143', crewOnboard: 22, crewCapacity: 24,
-    image: 'https://images.unsplash.com/photo-1605745341075-1b7b5a91c0b2?w=800&q=80',
+    image: 'https://images.pexels.com/photos/19588373/pexels-photo-19588373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v004', name: 'MV Southern Cross', imoNumber: '6543210', mmsiNumber: '567901234',
@@ -44,7 +44,7 @@ export const vessels: Vessel[] = [
     buildYear: 2015, classification: 'ClassNK', owner: 'Southern Shipping Corp', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 62, fuelEfficiency: 74, lastPort: 'Singapore',
     nextPort: 'Port Hedland', voyageId: 'V2026-0144', crewOnboard: 20, crewCapacity: 26,
-    image: 'https://images.unsplash.com/photo-1504889551-b5e3d34f0048?w=800&q=80',
+    image: 'https://images.pexels.com/photos/34748741/pexels-photo-34748741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v005', name: 'MT Horizon Voyager', imoNumber: '5432109', mmsiNumber: '678012345',
@@ -54,7 +54,7 @@ export const vessels: Vessel[] = [
     buildYear: 2018, classification: 'ABS', owner: 'Horizon Maritime', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 88, fuelEfficiency: 86, lastPort: 'Hong Kong',
     nextPort: 'Fujairah', voyageId: 'V2026-0145', crewOnboard: 26, crewCapacity: 28,
-    image: 'https://images.unsplash.com/photo-1516100882582-96c3a05fe590?w=800&q=80',
+    image: 'https://images.pexels.com/photos/30179291/pexels-photo-30179291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v006', name: 'MV Coral Princess', imoNumber: '4321098', mmsiNumber: '789123456',
@@ -64,7 +64,7 @@ export const vessels: Vessel[] = [
     buildYear: 2012, classification: 'DNV GL', owner: 'Nordic Ferries AS', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 55, fuelEfficiency: 71, lastPort: 'Bergen',
     nextPort: 'Hamburg', voyageId: 'V2026-0146', crewOnboard: 18, crewCapacity: 22,
-    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80',
+    image: 'https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     id: 'v007', name: 'MV Emerald Trader', imoNumber: '3210987', mmsiNumber: '890234567',
@@ -74,7 +74,7 @@ export const vessels: Vessel[] = [
     buildYear: 2016, classification: 'ClassNK', owner: 'Emerald Maritime Ltd', operator: 'OceanSphere Marine',
     manager: 'OceanSphere Fleet Mgmt', healthScore: 91, fuelEfficiency: 90, lastPort: 'Sydney',
     nextPort: 'Brisbane', voyageId: 'V2026-0147', crewOnboard: 16, crewCapacity: 18,
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
+    image: 'https://images.pexels.com/photos/12088250/pexels-photo-12088250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 ]
 
